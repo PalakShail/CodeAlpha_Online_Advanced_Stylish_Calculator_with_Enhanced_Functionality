@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <button class="theme-btn" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+
+            <!-- Display -->
+            <div class="display-section">
+                <div class="history" id="history"></div>
+                <div class="display" id="display">0</div>
+                <div class="memory-indicator" id="memoryIndicator">M</div>
+            </div>
+
+            <!-- Button Grid -->
+            <div class="button-grid">
+                <!-- Row 1 - Memory and Clear Functions -->
+                <button class="btn btn-memory" data-action="mc">MC</button>
+                <button class="btn btn-memory" data-action="mr">MR</button>
+                <button class="btn btn-memory" data-action="m-plus">M+</button>
+                <button class="btn btn-memory" data-action="m-minus">M-</button>
+                <button class="btn btn-memory" data-action="ms">MS</button>
+
+                <!-- Row 2 - Scientific Functions -->
+                <button class="btn btn-function" data-action="percentage">%</button>
+                <button class="btn btn-function" data-action="square-root">√</button>
+                <button class="btn btn-function" data-action="square">x²</button>
+                <button class="btn btn-function" data-action="plus-minus">±</button>
+                <button class="btn btn-clear" data-action="backspace">⌫</button>
+
+                <!-- Row 3 - Clear and Operations -->
+                <button class="btn btn-clear" data-action="clear">C</button>
+                <button class="btn btn-clear" data-action="all-clear">AC</button>
+                <button class="btn btn-operator" data-action="divide">÷</button>
+                <button class="btn btn-operator" data-action="multiply">×</button>
+                <button class="btn btn-operator" data-action="subtract">−</button>
+
+                <!-- Row 4-6 - Numbers and Operations -->
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator btn-add" data-action="add" rowspan="2">+</button>
+
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-equals btn-tall" data-action="equals">=</button>
+
+                <button class="btn btn-number btn-zero" data-number="0">0</button>
+                <button class="btn btn-decimal" data-action="decimal">.</button>
+            </div>
+
+            <!-- Keyboard Help -->
+            <div class="keyboard-help" id="keyboardHelp">
+                <div class="help-content">
+                    <h4>Keyboard Shortcuts</h4>
+                    <div class="help-grid">
+                        <span>0-9:</span><span>Numbers</span>
+                        <span>+ - * /:</span><span>Operations</span>
+                        <span>Enter:</span><span>Equals</span>
+                        <span>Escape:</span><span>Clear</span>
+                        <span>Backspace:</span><span>Delete</span>
+                        <span>.:</span><span>Decimal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help Toggle -->
+        <button class="help-toggle" id="helpToggle">?</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
